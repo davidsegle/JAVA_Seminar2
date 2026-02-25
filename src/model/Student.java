@@ -41,7 +41,7 @@ public class Student {
 		
 	}
 	public void setSurname(String inputSurname) {
-		if((inputSurname != null) && (!inputSurname.isEmpty()) && (inputSurname.matches("[A-ZĒŪĪĀŠĢĶĻŽČŅ]{1}[a-zēūīāšģķļžčņ]{2,15}( {1}[A-ZĒŪĪĀŠĢĶĻŽČŅ]{1}[a-zēūīāšģķļžčņ]{2,15})?"))) {
+		if((inputSurname != null) && (!inputSurname.isEmpty()) && (inputSurname.matches("[A-ZĒŪĪĀŠĢĶĻŽČŅ]{1}[a-zēūīāšģķļžčņ]{2,15}([-]{1}[A-ZĒŪĪĀŠĢĶĻŽČŅ]{1}[a-zēūīāšģķļžčņ]{2,15})?"))) {
 			surname = inputSurname;
 		}
 		else {
@@ -50,11 +50,25 @@ public class Student {
 	}
 	public void setPersonCode(String inputPersonCode) {
 		if((inputPersonCode != null) && (!inputPersonCode.isEmpty()) && (inputPersonCode.matches("[0-9]{6}[-]{1}[0-9]{5}"))) {
-			surname = inputPersonCode;
+			personCode = inputPersonCode;
 		}
 		else {
-			surname = "Unknown";
+			personCode = "Unknown";
 		}
+	}
+	
+	public Student() {
+		setStudId();
+		setName("Jānis");
+		setSurname("Bērziņš-Kalniņš");
+		setPersonCode("121212-12345");
+	}
+	
+	public Student(String inputName, String inputSurname, String inputPersonCode) {
+		setStudId();
+		setName(inputName);
+		setSurname(inputSurname);
+		setPersonCode(inputPersonCode);
 	}
  
 	
