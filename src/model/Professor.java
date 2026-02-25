@@ -67,5 +67,20 @@ public class Professor {
 	}
 	
 	
-	
+	 public Professor() {
+		 setProfId();
+		 setName("Dāvids");
+		 setSurname("Egle");
+		 setPersonCode("123954-76543");
+		 setDegree(ProfDegree.master);
+		
+	 }
+	 
+	 public Professor(String inputName, String inputSurname, String inputPersonCode, ProfDegree inputDegree) {
+		 
+	 }
+	 public String toString() {
+			String result = profId + ": " + name + " " + surname + " (" + personCode + ")";
+			return result;
+		}
 }
