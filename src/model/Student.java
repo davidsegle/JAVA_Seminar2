@@ -56,7 +56,7 @@ public class Student {
 			personCode = "Unknown";
 		}
 	}
-	
+	//konstruktori
 	public Student() {
 		setStudId();
 		setName("Jānis");
@@ -70,7 +70,12 @@ public class Student {
 		setSurname(inputSurname);
 		setPersonCode(inputPersonCode);
 	}
- 
+	//toString funckija
+	@Override
+	public String toString() {
+		String result = studId + ": " + name + " " + surname + " (" + personCode + ")";
+		return result;
+	}
 	
 	
 }
